@@ -1,12 +1,75 @@
 <html>
-<div id="container" style="width:33%" align="center">
-<font  size="3" face="helvetica">
-<title>Niccolò Arecco</title>
-<p>
-<i>" ...another great Italian"</i> - Frank Zappa
-<p>
-About
-<p>
-I have nothing to say, because my opinion is irrelevant in this context.
-</div>
+
+<head>
+<link href='https://fonts.googleapis.com/css?family=Futura&subset=latin,greek' rel='stylesheet' type='text/css'>
+	<title>Niccolò Arecco</title>
+<style>
+
+table{
+    width: 100%; 
+}
+table, th, td {
+ 	border: 0px solid black;
+    border-spacing: 0px;
+    text-align: center;
+    font-family: 'Futura', sans-serif;
+}
+td {    
+    width: 20%;
+    height: 500px;
+}
+
+table#t01 td:nth-child(1) {
+    background-color: #83C0CD;
+}
+table#t01 td:nth-child(2) {
+    background-color: #A9D2D9;
+}
+table#t01 td:nth-child(3) {
+   background-color: #F1DF91;
+}
+table#t01 td:nth-child(4) {
+    background-color: #ECCD84;
+}
+table#t01 td:nth-child(5) {
+    background-color: #F97172;
+}
+table#t01 th	{
+    background-color: white;
+    height: 20px;
+    text-align: right;
+}
+</style>
+</head>
+
+
+<body>
+<table id="t01">
+    <tr>
+    	 <th colspan="5"><i>" ...another great Italian"</i> - Frank Zappa</th>
+   </tr>
+   <tr>
+        <td>
+           content 1
+        </td>
+        <td>
+        	content 2
+        </td>
+    	<td>
+			content3
+        </td>
+        <td>
+			content4
+        </td>
+        <td>
+			content5
+        </td>
+    </tr>
+    <tr>
+    	 <th colspan="5"> <!---Empty Footer Space---></th>
+   		 
+   </tr>
+</table>
+
+</body>
 </html>
