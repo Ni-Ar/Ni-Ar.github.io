@@ -1,3 +1,2 @@
 # Ni-Ar.github.io
-*Simpler HTML for simple Website*
-`http://ni-ar.github.io/`
+*A Wes Anderson inspired, anti mouse scrolling, minimal website*
