@@ -5,6 +5,13 @@
     <link href='https://fonts.googleapis.com/css?family=Futura&subset=latin,greek' rel='stylesheet' type='text/css'>
 	<title>Niccolo' Arecco</title>
     <style>
+ 
+ 
+   body {
+        height:100%;
+        width:100%;
+        margin:0;
+    }
     
     table{
         width: 100%; 
@@ -31,7 +38,7 @@
     table#t01 td:nth-child(2) {
         background-color: #A9D2D9;
         vertical-align: text-top;
-       
+        
     }
     table#t01 td:nth-child(3) {
        background-color: #F1DF91;
@@ -46,15 +53,27 @@
     table#t01 td:nth-child(5) {
         background-color: #F97172;
         vertical-align: text-top;
-        
-        
+ 
     }
-    table#t01 th	{
+    table#t01 th {
         background-color: white;
         height: 25px;
         text-align: right;
     }
-    
+    #Text_pos {
+        position: relative;
+        top: 20%;
+        width: 100%;
+        height: 10%;
+        /*background-color: white; for align cntrl*/
+        text-align: center;
+
+    }
+    #Pubs_pos {
+        text-align: left;
+        padding-left: 5%;
+    }
+
     </style>
 </head>
 
@@ -66,73 +85,82 @@
     </tr>
    <tr>
         <td style="height: 100%">
-  0===0 <br>
-  0===0<br>
-   O=o<br>
-    O<br>
-   o=O<br>
-  0===0<br>
-  0===0<br>
-   O=o<br>
-    O<br>
-   o=O<br>
-  0===0<br>
-  0===0<br>
-   O=o<br>
-    O<br>
-   o=O<br>
-  0===0<br>
-  0===0<br>
-   O=o<br>
-    O<br>
-   o=O<br>
-  0===0<br>
-  0===0<br>
-   O=o<br>
+              0===0<br>
+               O=o<br>
+                O<br>
+               o=O<br>
+              0===0<br>
+              0===0<br>
+               O=o<br>
+                O<br>
+               o=O<br>
+              0===0<br>
+              0===0<br>
+               O=o<br>
+                O<br>
+               o=O<br>
+              0===0<br>
+              0===0<br>
+               O=o<br>
+                O<br>
+               o=O<br>
+              0===0<br>
+              0===0<br>
+               O=o<br>
+               O<br>
+               o=O<br>
+              0===0<br>
         </td>
         <td style="height: 100%">
-            <br><br>
+            <div ID="Text_pos">
         	<font size="7">Niccolò Arecco</font>
         	<br><br>
         	Final year PhD student
+        	<p>
+        	Epigenetics & Neuroscience    
+        	</div>
         </td>
     	<td style="height: 100%">
-    	    <br><br>
-			<font size="7">CV</font>
-			<br><br>
-			&#x1F4C4;
-			<p>
-            <a  href="https://orcid.org/0000-0003-1760-3898" target="orcid.widget">
-			<img src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
-			style="width:1em;" alt="ORCID iD icon">
-			</a>
-        </td>
-        <td style="height: 100%">
-            <br><br>
-			<font size="7">Publications</font>
-			<p>
-			<font size="4">
-			       I am co-first author on two publications:
-			<p> 
-			<div align="left">
-			<!-- 1) My PhD work on the SETD5 gene function and its involvement in autism 
-			<a href="https://www.ncbi.nlm.nih.gov/pubmed/" target="_blank">PMID</a> -->
-			<br><br>
-			2) Master internship work on muscluar dystrophies and extracellular matrix muscle proteins
-			<a href="https://www.ncbi.nlm.nih.gov/pubmed/27241590" target="_blank">PMID</a>
+    	    <div ID="Text_pos">
+    			<font size="7">CV</font>
+    			<br><br>
+    			<a href="./doc/CV_NiAr_2018.pdf" style="text-decoration:none">&#x1F4C4;</a>
+    			<p>
+                <a href="https://orcid.org/0000-0003-1760-3898" target="orcid.widget">
+                    <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png"	style="width:1em;" alt="ORCID iD icon">
+                </a>
 			</div>
-			</font>
-			<p>
-			<a  href= "https://scholar.google.de/citations?user=bHNnEQoAAAAJ&hl=en" target="_blank"> <img src="https://png2.kisspng.com/sh/8f66061b445c3a60b31888940dc31c8f/L0KzQYm3VME0N6dvfZH0aYP2gLBuTfNwdaF6jNd7LYPmebb1gBUub5D0f95uLYPmeLFzggIubJDojNH7LXBpPcHvifxwe5D1Rdl4b3fvdX68gfQxQWU6Sas9YkK0R3A6VsE2QGY3UKMAMkO5QYmBWcc3OGo2RuJ3Zx==/kisspng-computer-science-google-scholar-doctor-of-philosop-google-5ad0945194b217.3615852815236188976091.png" style="width:1em;" alt="ORCID iD icon"></a>
-			
         </td>
         <td style="height: 100%">
-            <br><br>
-			<font size="7">Contacts</font>
-			<br><br>
-			<a href="mailto:arecco.niccolo@gmail.com">&#x1F4E7;</a>
-			<p>
-			<a href="https://twitter.com/NccAcc" target="_blank">&#x1F426;</a>
+            <div ID="Text_pos">
+    			<font size="7">Publications</font>
+    			<p>
+    			<font size="4">
+    			 I am co-first author on two publications:
+    			<p> 
+    			<div ID="Pubs_pos">
+        			1) My PhD work on the SETD5 gene function and its involvement in autism 
+        			<a href="https://www.nature.com/articles/s41593-018-0266-2" style="text-decoration:none">link</a>
+        			<br>
+        			<br>
+        			2) Master internship work on muscluar dystrophies and extracellular matrix muscle proteins
+        			<a href="https://www.ncbi.nlm.nih.gov/pubmed/27241590" style="text-decoration:none">PMID</a>
+    			</div>
+    			</font>
+    			<p>
+    			<a href= "https://scholar.google.de/citations?user=bHNnEQoAAAAJ&hl=en" style="text-decoration:none">
+    			    <img src="./img/GScholar_logo_150ppi.png" style="width:1em;" alt="Gscholar Icon">
+    			</a>
+			</div>
+        </td>
+        <td style="height: 100%">
+            <div ID="Text_pos">
+    			<font size="7">Contacts</font>
+    			<br><br>
+    			<a href="mailto:arecco.niccolo@gmail.com" style="text-decoration:none">&#x1F4E7;</a>
+    			<p>
+    			<a href="https://twitter.com/NccAcc" style="text-decoration:none">&#x1F426;</a>
+			</div>
         </td>
     </tr>
    <!-- <tr> -->
