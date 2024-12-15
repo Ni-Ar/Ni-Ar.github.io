@@ -1,0 +1,9 @@
+## System files
+.fuse_hidden*
+.DS_Store
+._.DS_Store
+._*
+
+
+# to do notes
+secrets.txt

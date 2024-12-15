@@ -1,172 +1,272 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href='https://fonts.googleapis.com/css?family=Futura&subset=latin,greek' rel='stylesheet' type='text/css'>
-	<title>Niccolo' Arecco</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="5765z63f1ge5ihAcdgGZWV0Eqm1K7WmJMuEuAT81nY8" />
+    <title>Niccolò Arecco</title>
     <style>
- 
- 
-   body {
-        height:100%;
-        width:100%;
-        margin:0;
-    }
-    
-    table{
-        width: 100%; 
-        height:100%;
-    }
-    table, th, td {
-     	border: 0px solid black;
-        border-spacing: 0px;
-        text-align: center;
-        font-family: 'Futura', sans-serif;
-        
-    }
-    td {    
-        width: 20%;
-        font-size:25;
-    }
-    
-    table#t01 td:nth-child(1) {
-        background-color: #83C0CD;
-        vertical-align: center;
-        font-size:15;
-       
-    }
-    table#t01 td:nth-child(2) {
-        background-color: #A9D2D9;
-        vertical-align: text-top;
-        
-    }
-    table#t01 td:nth-child(3) {
-       background-color: #F1DF91;
-       vertical-align: text-top;
-       
-    }
-    table#t01 td:nth-child(4) {
-        background-color: #ECCD84;
-        vertical-align: text-top;
-        
-    }
-    table#t01 td:nth-child(5) {
-        background-color: #F97172;
-        vertical-align: text-top;
- 
-    }
-    table#t01 th {
-        background-color: white;
-        height: 25px;
-        text-align: right;
-    }
-    #Text_pos {
-        position: relative;
-        top: 20%;
-        width: 100%;
-        height: 10%;
-        /*background-color: white; for align cntrl*/
-        text-align: center;
+       html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            font-size: larger;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .page-content {
+            flex: 1 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            flex-grow: 1;
+        }
+        header {
+            background: #f4f4f4;
+            padding: 1rem;
+        }
+        nav {
+            display: flex;
+            justify-content: flex-end;
+        }
+        a {
+            color: #0066cc; /* Default link color for light mode */
+            transition: color 0.3s;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2rem;
+            gap: 20px; /* Controlled spacing between elements */
+        }
+        .bio {
+            flex: 0 1 600px; /* Limit the width of the bio */
+            min-width: 300px;
+            padding-right: 1rem;
+        }
+        .text-container {
+            max-width: 500px;  /* Adjust width as needed */
+            margin: 0 auto;    /* Center the container */
+            text-align: justify;
+            padding: 20px;     /* Optional: adds some breathing room */
+        }
+        .profile-pic {
+            flex: 0 1 300px;
+            min-width: 200px;
+            max-width: 300px;
+        }
+        .profile-pic img {
+            width: 100%;
+            height: auto;
+        }
+        footer {
+            flex-shrink: 0;
+            text-align: center;
+            padding: 0px;
+            background-color: #f4f4f4;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "🌙";
+            text-align: center;
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: black;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+        input:checked + .slider:before {
+            transform: translateX(26px);
+            content: "☀️";
+            background-color: white;
+        }
+        .dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+        .dark-mode header {
+            background-color: #222;
+        }
+        .dark-mode a {
+            color: #66b3ff; /* Lighter blue for links in dark mode */
+        }
 
-    }
-    #Pubs_pos {
-        text-align: left;
-        padding-left: 5%;
-    }
-
+        .dark-mode nav a {
+            color: #b3d9ff; /* Even lighter blue for navigation links in dark mode */
+        }
+        .dark-mode footer {
+            background-color: #222;
+            color: #fff;
+        }
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
-
-
 <body>
-<table id="t01">
-    <tr> 
-        <th colspan="5"><i>" ...another great Italian"</i> - Frank Zappa</th> 
-    </tr>
-   <tr>
-        <td style="height: 100%">
-              0===0<br>
-               O=o<br>
-                O<br>
-               o=O<br>
-              0===0<br>
-              0===0<br>
-               O=o<br>
-                O<br>
-               o=O<br>
-              0===0<br>
-              0===0<br>
-               O=o<br>
-                O<br>
-               o=O<br>
-              0===0<br>
-              0===0<br>
-               O=o<br>
-                O<br>
-               o=O<br>
-              0===0<br>
-              0===0<br>
-               O=o<br>
-               O<br>
-               o=O<br>
-              0===0<br>
-        </td>
-        <td style="height: 100%">
-            <div ID="Text_pos">
-        	<font size="7">Niccolò Arecco</font>
-        	<br><br>
-            Expert in Genomics, Epigenetics & Neuroscience  
-        	<p>
-        	Looking for job opportunities
-        	</div>
-        </td>
-    	<td style="height: 100%">
-    	    <div ID="Text_pos">
-    			<font size="7">Résumé</font>
-    			<br><br>
-    			<a href="./doc/CV_NiAr_2018.pdf" style="text-decoration:none" target="_blank">&#x1F4C4;</a>
-    			<p>
-                <a href="https://orcid.org/0000-0003-1760-3898" target="orcid.widget">
-                    <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png"	style="width:1em;" alt="ORCID iD icon">
-                </a>
-			</div>
-        </td>
-        <td style="height: 100%">
-            <div ID="Text_pos">
-    			<font size="7">Publications</font>
-    			<p>
-    			<font size="4">
-    			 I am co-first author on two publications:
-    			<p> 
-    			<div ID="Pubs_pos">
-        			1) My PhD work on the SETD5 gene function and its involvement in autism<br>
-        			<a href="https://www.ncbi.nlm.nih.gov/pubmed/30455454" style="text-decoration:none" target="_blank">PubMed</a>
-        			<br>
-        			<br>
-        			2) Master internship work on muscluar dystrophies and extracellular matrix muscle proteins<br>
-        			<a href="https://www.ncbi.nlm.nih.gov/pubmed/27241590" style="text-decoration:none" target="_blank">PubMed</a>
-    			</div>
-    			</font>
-    			<p>
-    			<a href= "https://scholar.google.it/citations?hl=en&user=bHNnEQoAAAAJ&view_op=list_works&sortby=pubdate" style="text-decoration:none" target="_blank">
-    			    <img src="./img/GScholar_logo_150ppi.png" style="width:1em;" alt="Gscholar Icon">
-    			</a>
-			</div>
-        </td>
-        <td style="height: 100%">
-            <div ID="Text_pos">
-    			<font size="7">Contacts</font>
-    			<br><br>
-    			<a href="mailto:arecco.niccolo@gmail.com" style="text-decoration:none">&#x1F4E7;</a>
-    			<p>
-    			<a href="https://twitter.com/NccAcc" style="text-decoration:none" target="_blank">&#x1F426;</a>
-			</div>
-        </td>
-    </tr>
-   <!-- <tr> -->
-    <!--	 <th colspan="5">  Empty Footer Space </th> -->
-   <!--</tr> -->
-</table>
+    <div class="page-content">
+        <header>
+            <nav>
+                <a href="#home">About</a>
+                <a href="#research">Research & Publications</a>
+                <a href="#contact">Contact</a>
+                <label class="switch">
+                    <input type="checkbox" id="darkModeToggle">
+                    <span class="slider"></span>
+                </label>
+            </nav>
+        </header>
 
+        <div class="container">
+            <section id="home">
+                <div class="content">
+                    <div class="bio text-container">
+                        <h1>Niccolò Arecco</h1>
+                        <p>Hi, I'm Nicco and welcome to my personal website! I am a postodoctoral researcher in the field of functional genomics.</p>
+                        <p>I work at <a href="https://www.crg.eu/">Centre for Genomic Regulation (CRG)</a> in the lab of <a href="https://www.crg.eu/juan_valcarcel">Juan Valcárcel</a> in the sunny Barcelona, Spain. 
+                            Currently I am part of the multidisciplinary <a href="https://cordis.europa.eu/project/id/101071936">UNLEASH project</a>, an ERC Synergy grant that aims to understand whether alternative splicing can be specifically modulated by small molecules.</p>
+                        <p>Before that I was a postdoc in the lab of <a href="https://www.transdevolab.com/">Manuel Irimia</a>, also at the CRG and I did my PhD in epigenetics & neuroscience under the supervision of <a href="https://www.embl.org/groups/noh/">Kyung-Min Noh at EMBL</a> in Heidelberg, Germany.</p>
+                        <p>For more details about my professional background, please check my <a href="./doc/CV_NiAr_2024.pdf">CV</a>.</p>
+                    </div>
+                    <div class="profile-pic">
+                        <img src="./img/Arecco_Niccolò_Headshot.jpg" alt="Niccolò Arecco Profile Picture">
+                    </div>
+                </div>
+            </section>
+
+            <section id="research" class="hidden">
+                <h2>Research</h2>
+                <h3>Brief Research Statement</h3>
+                <p>My previous and ongoing work focuses on gene transcription using functional genomics approaches. I am particularly interested in how novel alternative splicing programmes diversify the functions of chromatin regulators consequently affecting gene expression.</p>
+                
+                <h3>Selected Publications</h3>
+                <ul>
+                    <li><b>Arecco N.</b><sup>1</sup>, Mocavini I.<sup>1</sup>, et al. (2024)<br>
+                        <i><a href="https://doi.org/10.1016/j.molcel.2024.02.011">Alternative splicing decouples local from global PRC2 activity</a></i><br>
+                        Molecular Cell
+                        <span class="__dimensions_badge_embed__" data-doi="10.1016/j.molcel.2024.02.011" data-legend="hover-right" data-style="large_rectangle"></span><script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script></li>
+                    <li>Deliu E.<sup>1</sup>, <b>Arecco N.</b><sup>1</sup>, et al. (2018)<br>
+                        <i><a href="https://doi.org/10.1038/s41593-018-0266-2">Haploinsufficiency of the intellectual disability gene SETD5 disturbs developmental gene expression and cognition</a></i><br>
+                        Nature Neuroscience
+                        <span class="__dimensions_badge_embed__" data-doi="10.1038/s41593-018-0266-2" data-legend="hover-right" data-style="large_rectangle"></span><script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script></li>
+                </ul>
+                <sup>1</sup> indicates co-authorship.
+                <h3>Full list of publications</h3>
+                <p>You can check out all my pre-prints and publications on <a href="https://scholar.google.com/citations?hl=en&user=bHNnEQoAAAAJ&view_op=list_works&sortby=pubdate">my Google Scholar</a> or all my peer-reviewed work with this <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Arecco+N[AU]+OR+Arecco+Niccol%C3%B2[FAU]&sort=date">PubMed search</a>.</p>
+
+            </section>
+
+            <section id="contact" class="hidden">
+                <h2>Contact</h2>
+                <p>Email: <a href="#" id="emailLink">click to reveal</a></p>
+                <p id="emailAddress" class="hidden"><img src="./img/contact_crg.png" alt="Niccolò Arecco CRG work email picture"></p>
+                <p>You can find me at:</p>
+                <ul>
+                    <li><a href="https://github.com/Ni-Ar"><img src="https://companieslogo.com/img/orig/github-97592640.png" style="width: 1em; margin-inline-start: 0.5em" alt="GitHub icon"/> GitHub</a></li>
+                    <li><a href="https://scholar.google.com/citations?hl=en&user=bHNnEQoAAAAJ&view_op=list_works&sortby=pubdate"><img src="./img/GScholar_logo_150ppi.png" style="width: 1em; margin-inline-start: 0.5em" alt="Google Scholar iD icon"/> Google Scholar</a></li>
+                    <li><a href="https://orcid.org/0000-0003-1760-3898"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width: 1em; margin-inline-start: 0.5em" alt="ORCID iD icon"/> ORCiD</a></li>
+                    <li><a href="https://www.webofscience.com/wos/author/record/X-9038-2019"><img src="https://companieslogo.com/img/orig/CLVT-be02c47f.png" style="width: 1em; margin-inline-start: 0.5em" alt="Clarivate icon"/> Web of Science ResearcherID</a></li>
+                    <li><a href="https://www.researchgate.net/profile/Niccolo-Arecco"><img src="./img/ResearchGate.png" style="width: 1em; margin-inline-start: 0.5em" alt="Research Gate icon"/>  ResearchGate</a></li>
+                    <li><a href="https://www.linkedin.com/in/yourprofile"><img src="https://companieslogo.com/img/orig/LNKD.defunct.2016-d582336a.png" style="width: 1em; margin-inline-start: 0.5em" alt="LinkedIn icon"/> LinkedIn</a></li>
+                    <!-- <li><a href="https://twitter.com/nccacc?lang=en">Twitter</a></li> -->
+                </ul>
+            </section>          
+        </div>
+    </div>
+    <footer>
+        <h6><p>Last update made on: December 2024</p></h6>
+    </footer>
+    
+    <script>
+        // Dark mode toggle script
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode');
+        });
+
+        const navLinks = document.querySelectorAll('nav a');
+        const sections = document.querySelectorAll('section');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                sections.forEach(section => {
+                    section.classList.add('hidden');
+                });
+                document.getElementById(targetId).classList.remove('hidden');
+            });
+        });
+        
+        // Open all external links in new tab
+        document.addEventListener('DOMContentLoaded', function() {
+            var links = document.getElementsByTagName('a');
+            for (var i = 0; i < links.length; i++) {
+                if (links[i].hostname != window.location.hostname) {
+                    links[i].target = '_blank';
+                    links[i].rel = 'noopener noreferrer';
+                }
+            }
+        });
+        
+        // Email disapper toggle
+        const emailLink = document.getElementById('emailLink');
+        const emailAddress = document.getElementById('emailAddress');
+
+        emailLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            emailAddress.classList.toggle('hidden');
+        });
+
+        // Show home section by default
+        document.getElementById('home').classList.remove('hidden');
+    </script>
 </body>
 </html>
